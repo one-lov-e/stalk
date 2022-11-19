@@ -1,6 +1,12 @@
 // Тут будуть змінні у форматі SASS
 // Приклад оголошення: $defaultPadding: 20px
 
+// * breakpoints
 $mobileBreakpoint: 480px;
 $tabletBreakpoint: 768px;
 $desktopBreakpoint: 1280px;
+
+// * container padding
+$containerPaddingDefault: 40px;
+$containerPaddingBig: 80px;
+$containerPaddingSmall: 16px;
