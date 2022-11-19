@@ -1,6 +1,9 @@
 // Головний SASS для імпортів з інших папок
 // Не чіпати
 
+// ! Modern normalize стоїть виключно на початку, щоби перебивання стилів працювало правильно
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
 @import 'base/main';
 @import 'layout/main';
 @import 'pages/main';
