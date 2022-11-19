@@ -1,4 +1,12 @@
 .footer {
-    background-color: #001414;;
+    background-color: #001414;
     color:#FFFFFF;
- }
+    @include media-mobile() {
+            height: 401px;
+        }
+    
+        @include media-tablet() {
+            height: 215px;
+        }
+    
+}
