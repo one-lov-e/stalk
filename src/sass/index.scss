@@ -1,2 +1,7 @@
-@import './common';
-@import './example';
+// Головний SASS для імпортів з інших папок
+// Не чіпати
+
+@import 'base/main';
+@import 'layout/main';
+@import 'pages/main';
+@import 'utils/main';
