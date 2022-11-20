@@ -10,3 +10,18 @@ $desktopBreakpoint: 1280px;
 $containerPaddingDefault: 40px;
 $containerPaddingBig: 80px;
 $containerPaddingSmall: 16px;
+
+:root {
+
+  /* колір текста основний  #FFFFF*/
+  /* колір текста вторинний #8D9289*/
+  /* колір текста акцентний #212121 */
+  --primary-text-color:#ffffff;
+  --secondary-text-color:#8D9289;
+  --accent-text-color:#86E543;
+
+  
+  /* колір фона основний  */
+    --background-color:  #01383A;
+  
+}
