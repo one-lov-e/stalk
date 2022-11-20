@@ -11,42 +11,68 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/example.html"></include>
-    <footer class="footer">
-      <h2>SHOP FOR GAMERS</h2>
-      <div>
-        <ul>
-          <li>Accessories</li>
-          <li>Take order</li>
-          <li>Contact</li>
-          <li>Blog</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>inst</li>
-          <li>youtube</li>
-          <li>fb</li>
-        </ul>
-      </div>
 
-      <div>
-        <h3>Email</h3>
-        <a class="footer-link" href="mailto:sfg.info@gmail.com"
-          >sfg.info@gmail.com</a
-        >
-        <h3>Phone number</h3>
-        <ul>
-          <li>
-            <a class="footer-link" href="tel:+38 (093) 643 22 88"
-              >+38 (093) 643 22 88</a
-            >
-          </li>
-          <li>
-            <a class="footer-link" href="tel:+38 (050) 345 44 23"
-              >+38 (050) 345 44 23</a
-            >
-          </li>
-        </ul>
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-logo">
+          SHOP FOR <br />
+          GAMERS
+        </h2>
+        <div class="footer-flex">
+          <section>
+            <ul class="footer-list">
+              <li class="footer-item">Accessories</li>
+              <li class="footer-item">Take order</li>
+              <li class="footer-item">Contact</li>
+              <li class="footer-item">Blog</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul class="footer-soc-list">
+              <li class="footer-soc-item">
+                <a href="">
+                  <svg class="footer-soc-icon" width="10.5" height="10.5"></svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="">
+                  <svg class="footer-soc-icon" width="12" height="8"></svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="">
+                  <svg class="footer-soc-icon" width="6.5" height="12"></svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="footer-contacts">
+          <h3 class="footer-title">Email</h3>
+          <ul>
+            <li class="footer-meil-item">
+             <a class="footer-link" href="mailto:sfg.info@gmail.com"
+            >sfg.info@gmail.com</a
+          >
+            </li>
+          </ul>
+          
+          <h3 class="footer-title">Phone number</h3>
+          <ul>
+            <li class="footer-tel-item">
+              <a class="footer-link" href="tel:+38 (093) 643 22 88"
+                >+38 (093) 643 22 88</a
+              >
+            </li class="footer-tel-item">
+            <li>
+              <a class="footer-link" href="tel:+38 (050) 345 44 23"
+                >+38 (050) 345 44 23</a
+              >
+            </li>
+          </ul>
+        </section>
       </div>
     </footer>
   </body>
