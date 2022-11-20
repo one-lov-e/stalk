@@ -25,10 +25,11 @@
             padding-top: 40px;
             padding-right: 50px;
             padding-bottom: 40px;
-            padding-left: 40px;
+            padding-left: 39px;
                  }
      @include media-desktop() {
         padding-right: 179px;
+        padding-left: 80px;
      }
 
 }
@@ -39,7 +40,7 @@
     line-height: 1.16;
     color: #FFFFFF;
     margin-bottom: 25px;
-
+    text-align: center;
 
 }
 
@@ -70,6 +71,7 @@
             @include media-tablet() {
             flex-direction: row;
             margin-right: 73px;
+            gap: 16px;
             }
         
             @include media-desktop() {
