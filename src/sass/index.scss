@@ -4,7 +4,10 @@
 // ! Modern normalize стоїть виключно на початку, щоби перебивання стилів працювало правильно
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// ! Змінні та база також зверху
 @import 'base/main';
+@import 'utils/main';
+
+// * Бажано також не змінювати порядок
 @import 'layout/main';
 @import 'pages/main';
-@import 'utils/main';
