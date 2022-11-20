@@ -1,5 +1,5 @@
 .mobile-menu-container {
-   @media screen and (max-width: 767px) {
+   @media screen and (min-width: $desktopBreakpoint) {
       display: none;
    }
    width: 100vw;
@@ -12,12 +12,23 @@
       (min-resolution: 2dppx) {
       background-image: url(../images/mobile-menu/bg-mobile@2x.jpg);
    }
+   @media screen and (min-width: $mobileBreakpoint) {
+      background-image: url(../images/mobile-menu/bg-tablet.jpg);
+      @media (min-device-pixel-ratio: 2),
+         (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+         background-image: url(../images/mobile-menu/bg-tablet@2x.jpg);
+      }
+   }
 }
 .page-list {
    display: flex;
    align-items: center;
-
    margin-top: 64px;
+   @media screen and (min-width: $tabletBreakpoint) {
+      margin-top: 120px;
+   }
 }
 .page {
    &:not(:last-child) {
@@ -30,6 +41,10 @@
    font-weight: 700;
    font-size: 24px;
    line-height: 1.2;
+   color: $primaryТextСolor;
    text-decoration: none;
    text-transform: uppercase;
+   @media screen and (min-width: $tabletBreakpoint) {
+      font-size: 32px;
+   }
 }
