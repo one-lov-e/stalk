@@ -1,176 +1,146 @@
-<!DOCTYPE html>
-<html lang="uk">
+.page_name {
+  @include font(500, 24px, 1.16);
+  margin-bottom: 31px;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/main.min.css " />
+  @include tablet {
+    @include font(500, 56px, 1.2);
+    margin-left: 60px;
+    margin-bottom: 67px;
+  }
+  @include desktop {
+    @include font(500, 56px, 1.2);
+    margin-left: 100px;
+    margin-bottom: 75px;
+  }
+}
 
-    <title> Blog Page</title>
+.blog_item {
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+}
 
-</head>
+.blog_title {
+  @include font(500, 24px, 1.16);
+  // ця тінь є в таких же заголовках для інших секцій
+  // можна винести в окрему змінну
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
 
-<body>
+  @include tablet {
+    @include font(500, 56px, 1);
+  }
 
-    <main>
-        <!---------------------section blog------------------->
-        <section class="blog">
-            <div class="container">
-                <!-- заголовок секції однаковий- такий же як Take order  и  Contacts -->
-                <!-- тому клас треба додати йому такий же як у iнших  -->
+  @include desktop {
+    @include font(500, 56px, 1);
+    margin-bottom: 52px;
+  }
+}
 
-                <h2 class="page_name">Blog</h2>
+.blog_container_tablet {
+  margin-bottom: 0px;
+  @include tablet {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 16px;
+  }
+}
 
-                <!-- додати подвійну линию ЧЕРЕЗ SVG
-                <svg class="" with="" height="">
-                <use href="./images/symbol-defs.svg#icon-ПОДВІЙНА ЛИНИЯ "></use>
-                </svg>-->
+.blog_picture {
+  display: block;
+  margin-bottom: 8px;
 
-                <ul class="blog_list">
-                    <li class="blog_item">
-                        <div class="blog_picture_desktop">
-                            <picture>
-                                <source srcset="./images/blog1_desk_1x.jpg 1x,
-                                                ./images/blog1_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                <source srcset="./images/blog1_tablet_1x.jpg 1x,
-                                                ./images/blog1_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                <source srcset="./images/blog1_mobile_1x.jpg 1x,
-                                                ./images/blog1_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                <img src="./images/blog1_desk_1x.jpg" alt="blog" width="390">
-                            </picture>
-                        </div>
-                        <div class="blog_container_desktop">
-                            <h3 class="blog_title">Guide to Picking The Right Gaming Headset</h3>
-                            <div class="blog_container_tablet">
-                                <div class="blog_picture">
-                                    <picture>
-                                        <source srcset="./images/blog1_desk_1x.jpg 1x,
-                                                        ./images/blog1_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                        <source srcset="./images/blog1_tablet_1x.jpg 1x,
-                                                        ./images/blog1_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                        <source srcset="./images/blog1_mobile_1x.jpg 1x,
-                                                        ./images/blog1_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                        <img src="./images/blog1_desk_1x.jpg" alt="blog" width="390">
-                                    </picture>
-                                </div>
-                                <div class="blog_content">
-                                    <span class="blog_writer">By Ray Ian Ampoloquio</span>
-                                    <span class="blog_updated">Updated on September 21, 2022</span>
-                                </div>
-                            </div>
-                            <p class="blog_text">Learn how to 
-                                choose an amazing gaming headset with this checklist of
-                                just 9 surprisingly simple steps. Gaming headsets
-                                offer a handy and practical solution to any and all of your gaming audio needs. But, as
-                                with any kind of ...</p>
+  @include desktop {
+    display: none;
+  }
+}
 
-                            <!-- посилання на Blog Article Page -->
-                            <a class="blog_etg" href="#">Learn more</a>
-                        </div>
-                    </li>
-                    <!------------------------------->
+.blog_picture_desktop {
+  display: none;
+  @include desktop {
+    display: block;
+    width: 100%;
+  }
+}
 
-                    <li class="blog_item">
-                        <div class="blog_picture_desktop">
-                            <picture>
-                                <source srcset="./images/blog2_desk_1x.jpg 1x,
-                                                ./images/blog2_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                <source srcset="./images/blog2_tablet_1x.jpg 1x,
-                                                ./images/blog2_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                <source srcset="./images/blog2_mobile_1x.jpg 1x,
-                                                ./images/blog2_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                <img src="./images/blog2_desk_1x.jpg" alt="blog" width="390">
-                            </picture>
-                        </div>
+.blog_content {
+  @include tablet {
+    display: block;
+    width: 248px;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    gap: 96px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.blog_writer {
+  display: block;
+  @include font(500, 16px, 1.16);
+  margin-bottom: 8px;
 
-                        <div class="blog_container_desktop">
-                            <h3 class="blog_title">Mic Monitoring: What Is It and How It Is Relevant to Gaming</h3>
-                            <div class="blog_container_tablet">
-                                <div class="blog_picture">
-                                    <picture>
-                                        <source srcset="./images/blog2_desk_1x.jpg 1x,
-                                                        ./images/blog2_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                        <source srcset="./images/blog2_tablet_1x.jpg 1x,
-                                                        ./images/blog2_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                        <source srcset="./images/blog2_mobile_1x.jpg 1x,
-                                                        ./images/blog2_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                        <img src="./images/blog2_desk_1x.jpg" alt="blog" width="390">
-                                    </picture>
-                                </div>
-                                <div class="blog_content">
-                                    <span class="blog_writer">By Gab L</span>
-                                    <span class="blog_updated">Updated on September 10, 2022</span>
-                                </div>
-                            </div>
-                            <p class="blog_text">An explanation and exploration of microphone monitoring — its benefits
-                                and how you can start using one of the most
-                                underrated features today ...</p>
+  @include tablet {
+    @include font(500, 24px, 1);
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    @include font(500, 24px, 1);
+    margin-bottom: 0px;
+  }
+}
+.blog_updated {
+  display: block;
+  @include font(500, 16px, 1.16);
+  margin-bottom: 8px;
+  color: var(--secondary-text-color);
 
-                            <!-- посилання на Blog Article Page -->
-                            <a class="blog_etg" href="#">Learn more</a>
-                        </div>
-                    </li>
+  @include tablet {
+    @include font(500, 24px, 1);
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    @include font(500, 24px, 1);
+    margin-bottom: 0px;
+  }
+}
 
-                    <!------------------------------->
-                    <li class="blog_item">
-                        <div class="blog_picture_desktop">
-                            <picture>
-                                <source srcset="./images/blog3_desk_1x.jpg 1x,
-                                                ./images/blog3_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                <source srcset="./images/blog3_tablet_1x.jpg 1x,
-                                                ./images/blog3_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                <source srcset="./images/blog3_mobile_1x.jpg 1x,
-                                                ./images/blog3_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                <img src="./images/blog3_desk_1x.jpg" alt="blog" width="390">
-                            </picture>
-                        </div>
-                        <div class="blog_container_desktop">
-                            <h3 class="blog_title">How to Choose the Right Gaming Mouse</h3>
-                            <div class="blog_container_tablet">
-                                <div class="blog_picture">
-                                    <picture>
-                                        <source srcset="./images/blog3_desk_1x.jpg 1x,
-                                                        ./images/blog3_desk_2x.jpg 2x" media="(min-width: 1280px)" />
-                                        <source srcset="./images/blog3_tablet_1x.jpg 1x,
-                                                        ./images/blog3_tablet_2x.jpg 2x" media="(min-width: 768px)" />
-                                        <source srcset="./images/blog3_mobile_1x.jpg 1x,
-                                                        ./images/blog3_mobile_2x.jpg 2x" media="(max-width: 767px)" />
-                                        <img src="./images/blog3_desk_1x.jpg" alt="blog" width="390">
-                                    </picture>
-                                </div>
-                                <div class="blog_content">
-                                    <span class="blog_writer">By Michael Crider</span>
-                                    <span class="blog_updated">Updated on September 2, 2022</span>
-                                </div>
-                            </div>
-                            <p class="blog_text">A good mouse can make a big difference when playing your favorite
-                                games. Here’s what you need to know about grip styles,
-                                types of gaming mice, technical specs, and more, before purchasing a new gaming mouse
-                                ...</p>
+.blog_text {
+  display: inline-block;
 
-                            <!-- посилання на Blog Article Page -->
-                            <a class="blog_etg" href="#">Learn more</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+  @include font(400, 16px, 1.187);
+  margin-bottom: 8px;
+  @include tablet {
+    @include font(400, 24px, 1.16);
+    margin-bottom: 16px;
+  }
+  @include desktop {
+    @include font(400, 24px, 1.16);
+    margin-bottom: 20px;
+    width: 693px;
+  }
+}
 
-            <!--  тут Маркерам знизу слід додати анімації
-            для імітації процесу підвантаження інформації на сторінці. -->
-        </section>
+.blog_etg {
+  display: block;
+  text-align: right;
+  @include font(500, 16px, 1);
+  color: var(--accent-text-color);
 
-        <!--   тут має бути footer  -->
-
-    </main>
-
-</body>
-
-</html>
+  @include tablet {
+    @include font(500, 24px, 1);
+  }
+  @include desktop {
+    @include font(500, 24px, 1);
+  }
+}
