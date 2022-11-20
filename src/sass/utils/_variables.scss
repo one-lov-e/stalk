@@ -11,17 +11,14 @@ $containerPaddingDefault: 40px;
 $containerPaddingBig: 80px;
 $containerPaddingSmall: 16px;
 
-:root {
+
 
   /* колір текста основний  #FFFFF*/
   /* колір текста вторинний #8D9289*/
   /* колір текста акцентний #212121 */
-  --primary-text-color:#ffffff;
-  --secondary-text-color:#8D9289;
-  --accent-text-color:#86E543;
-
+  $primaryТextСolor:#ffffff;
+  $secondaryTextColor:#8D9289;
+  $accentTextColor:#86E543;
+   /* колір фона основний  */
+  $backgroundColor:  #01383A;
   
-  /* колір фона основний  */
-    --background-color:  #01383A;
-  
-}

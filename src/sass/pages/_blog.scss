@@ -1,25 +1,25 @@
-.page_name {
+.page-name {
   @include font(500, 24px, 1.16);
   margin-bottom: 31px;
 
-  @include tablet {
+  @include media-tablet {
     @include font(500, 56px, 1.2);
     margin-left: 60px;
     margin-bottom: 67px;
   }
-  @include desktop {
+  @include media-desktop {
     @include font(500, 56px, 1.2);
     margin-left: 100px;
     margin-bottom: 75px;
   }
 }
 
-.blog_item {
+.blog-item {
   margin-bottom: 24px;
-  @include tablet {
+  @include media-tablet {
     margin-bottom: 40px;
   }
-  @include desktop {
+  @include media-desktop {
     display: flex;
     gap: 120px;
     align-items: center;
@@ -28,7 +28,7 @@
   }
 }
 
-.blog_title {
+.blog-title {
   @include font(500, 24px, 1.16);
   // ця тінь є в таких же заголовках для інших секцій
 <<<<<<< Updated upstream
@@ -39,19 +39,19 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 15px;
 
-  @include tablet {
+  @include media-tablet {
     @include font(500, 56px, 1);
   }
 
-  @include desktop {
+  @include media-desktop {
     @include font(500, 56px, 1);
     margin-bottom: 52px;
   }
 }
 
-.blog_container_tablet {
+.blog-container-tablet {
   margin-bottom: 0px;
-  @include tablet {
+  @include media-tablet {
     display: flex;
     align-items: flex-end;
     gap: 40px;
@@ -59,29 +59,29 @@
   }
 }
 
-.blog_picture {
+.blog-picture {
   display: block;
   margin-bottom: 8px;
 
-  @include desktop {
+  @include media-desktop {
     display: none;
   }
 }
 
-.blog_picture_desktop {
+.blog-picture-desktop {
   display: none;
-  @include desktop {
+  @include media-desktop {
     display: block;
     width: 100%;
   }
 }
 
-.blog_content {
-  @include tablet {
+.blog-content {
+  @include media-tablet {
     display: block;
     width: 248px;
   }
-  @include desktop {
+  @include media-desktop {
     display: flex;
     justify-content: space-between;
     gap: 96px;
@@ -89,62 +89,62 @@
     margin-bottom: 20px;
   }
 }
-.blog_writer {
+.blog-writer {
   display: block;
   @include font(500, 16px, 1.16);
   margin-bottom: 8px;
 
-  @include tablet {
+  @include media-tablet {
     @include font(500, 24px, 1);
     margin-bottom: 32px;
   }
-  @include desktop {
+  @include media-desktop {
     @include font(500, 24px, 1);
     margin-bottom: 0px;
   }
 }
-.blog_updated {
+.blog-updated {
   display: block;
   @include font(500, 16px, 1.16);
   margin-bottom: 8px;
-  color: var(--secondary-text-color);
+  color: var($secondaryTextColor);
 
-  @include tablet {
+  @include media-tablet {
     @include font(500, 24px, 1);
     margin-bottom: 0px;
   }
-  @include desktop {
+  @include media-desktop {
     @include font(500, 24px, 1);
     margin-bottom: 0px;
   }
 }
 
-.blog_text {
+.blog-text {
   display: inline-block;
 
   @include font(400, 16px, 1.187);
   margin-bottom: 8px;
-  @include tablet {
+  @include media-tablet {
     @include font(400, 24px, 1.16);
     margin-bottom: 16px;
   }
-  @include desktop {
+  @include media-desktop {
     @include font(400, 24px, 1.16);
     margin-bottom: 20px;
     width: 693px;
   }
 }
 
-.blog_etg {
+.blog-etg {
   display: block;
   text-align: right;
   @include font(500, 16px, 1);
-  color: var(--accent-text-color);
+  color: var($accentTextColor);
 
-  @include tablet {
+  @include media-tablet {
     @include font(500, 24px, 1);
   }
-  @include desktop {
+  @include media-desktop {
     @include font(500, 24px, 1);
   }
 }
