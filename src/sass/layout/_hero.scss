@@ -3,64 +3,76 @@
 }
 
 .section-hero {
-  height: 600px;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-top: 180px;
+  gap: 25px;
+  height: 600px;
+  padding-top: 284px;
 
-  background-image: url('../images/hero/hero.webp');
-  background-repeat: no-repeat;
-  background-position: calc(100% + 130px);
-  background-size: cover;
+  // background-image: url('../images/hero/test-hero.jpg');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/hero/hero@2x.webp');
-  }
+  // @media (min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   // background-image: url('../images/hero/hero@2x.webp');
+  // }
 
-  // * if no webp support in browser, load jpg. Check by checkWebpSupport.js
-  body.no-webp & {
-    background-image: url('../images/hero/hero.jpg');
+  // // * if no webp support in browser, load jpg. Check by checkWebpSupport.js
+  // body.no-webp & {
+  //   // background-image: url('../images/hero/hero.jpg');
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/hero/hero@2x.jpg');
-    }
-  }
+  //   @media (min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     // background-image: url('../images/hero/hero@2x.jpg');
+  //   }
+  // }
 
   @media screen and (max-width: 767px) {
     align-items: center;
   }
 
   @include media-tablet() {
-    height: 728px;
+    height: 860px;
+    padding-top: 290px;
 
     // background-position: calc(100% + 130px) -30px;
     background-position: center;
     background-size: contain;
     gap: 94px;
   }
+
+  @include media-desktop() {
+    padding-top: 316px;
+    padding-left: 102px;
+  }
 }
 
 .hero-title {
   width: 247px;
 
-  @include font(600, 32px, 1.18);
-  text-align: center;
+  @include font(500, 32px, 1.18);
   color: #ffffff;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
   @include media-tablet() {
     width: 388px;
+
     font-size: 56px;
   }
 
   @include media-desktop() {
+    width: 436px;
+
     font-size: 64px;
   }
 }
