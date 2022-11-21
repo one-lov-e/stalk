@@ -1,0 +1,63 @@
+* {
+  outline: 1px solid tomato;
+}
+
+.section-hero {
+  height: 600px;
+  background-image: url('../images/hero/hero.webp');
+  background-repeat: no-repeat;
+  background-position: calc(100% + 130px);
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero/hero@2x.webp');
+  }
+
+  // * if no webp support in browser, load jpg. Check by checkWebpSupport.js
+  body.no-webp & {
+    background-image: url('../images/hero/hero.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero@2x.jpg');
+    }
+  }
+
+  @include media-tablet() {
+    height: 728px;
+
+    background-position: calc(100% + 130px) -30px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+  padding-top: 180px;
+
+  @media screen and (max-width: 767px) {
+    align-items: center;
+  }
+
+  @include media-tablet() {
+    gap: 94px;
+  }
+}
+
+.hero-title {
+  width: 247px;
+
+  @include font(600, 32px, 1.18);
+  text-align: center;
+  color: #ffffff;
+
+  @include media-tablet() {
+    width: 388px;
+    font-size: 56px;
+  }
+}
