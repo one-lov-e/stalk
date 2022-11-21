@@ -1,4 +1,6 @@
 .accessories {
+    padding-top: 40px;
+    padding-bottom: 50px;
   background-image: url(../images/bg-access-mobl-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -10,6 +12,8 @@
     background-image: url(../images/bg-access-mobl-2x.jpg);
   }
   @include media-tablet {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-image: url(../images/bg-access-tabl-1x.jpg);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -29,6 +33,7 @@
 
 .accessories-list-btn {
   list-style: none;
+  
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +41,7 @@
   gap: 24px;
 
   @include media-tablet {
+   
     margin-bottom: 72px;
     gap: 44px;
   }
