@@ -1,0 +1,2 @@
+var selected=document.querySelector(".selected"),optionsContainer=document.querySelector(".options-container"),optionsList=document.querySelectorAll(".option");selected.addEventListener("click",(function(){optionsContainer.classList.toggle("active")})),optionsList.forEach((function(e){e.addEventListener("click",(function(){selected.innerHTML=e.querySelector("label").innerHTML,optionsContainer.classList.remove("active")}))}));
+//# sourceMappingURL=takeOrder.ecf6de98.js.map
