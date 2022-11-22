@@ -113,7 +113,7 @@
    display: block;
    @include font(500, 16px, 1.16);
    margin-bottom: 8px;
-   color: var($secondaryTextColor);
+   color: $secondaryTextColor;
    display: block;
    @include font(500, 16px, 1.16);
    margin-bottom: 8px;
