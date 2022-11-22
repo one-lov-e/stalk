@@ -1,20 +1,24 @@
 
 /* Линии на бордере */
 
-.line {
+.lines {
   margin-bottom: 24px;
+
+   @media screen and (min-width: 768px) {
+    margin-top: 8px;
+   }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 56px;
   }
 }
 
-.line_first {
+.line-first {
   margin-bottom: -5px;
 }
 
-.line_first,
-.line_second {
+.line-first,
+.line-second {
   display: flex;
   flex-wrap: nowrap;
 }

@@ -36,7 +36,7 @@ body {
   }
 }
 
-.to__main {
+.to-main {
   padding-top: 40px;
 
   @media screen and (min-width: 768px) {
@@ -48,7 +48,7 @@ body {
   }
 }
 
-.to__title {
+.to-title {
   @include font(600, 24px, 1.16);
   color: $primaryТextСolor;
 
@@ -60,7 +60,7 @@ body {
 
 
 @media screen and (min-width: 1280px) {
-  .to__product_info {
+  .to-product-info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ body {
   }
 }
 
-.to__name {
+.to-name {
   display: block;
   margin-bottom: 16px;
   @include font(600, 32px, 1.19);
@@ -96,7 +96,7 @@ body {
   }
 }
 
-.to__image_main {
+.to-image-main {
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
@@ -112,7 +112,7 @@ body {
   }
 }
 
-.to__img-main {
+.to-img-main {
   width: 288px;
   height: 254px;
   border-radius: 12px;
@@ -123,7 +123,7 @@ body {
   }
 }
 
-.to__price {
+.to-price {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -144,7 +144,7 @@ body {
   }
 }
 
-.to__sale-price {
+.to-sale-price {
   @include font(600, 16px, 1);
   text-decoration-line: line-through;
   color: #8d9289;
@@ -160,7 +160,7 @@ body {
   }
 }
 
-.to__discount-price {
+.to-discount-price {
   @include font(600, 32px, 1);
   color: $accentTextColor;
 
@@ -173,7 +173,7 @@ body {
   }
 }
 
-.to__images-list {
+.to-images-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -188,7 +188,7 @@ body {
   }
 }
 
-.to__image-img {
+.to-image-img {
   height: 62px;
   width: 60px;
   border-radius: 6px;
@@ -199,7 +199,7 @@ body {
   }
 }
 
-.to__contact {
+.to-contact {
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -213,7 +213,7 @@ body {
   }
 }
 
-.to__contact-title {
+.to-contact-title {
   width: 100%;
   @include font(600, 24px, 1.17);
   color: $accentTextColor;
@@ -229,7 +229,7 @@ body {
   }
 }
 
-.to__form {
+.to-form {
   display: block;
   width: 100%;
 }
@@ -243,14 +243,14 @@ input:valid {
   border-color: $accentTextColor;
 }
 
-.to__form-full {
+.to-form-full {
   @media screen and (min-width: 1280px) {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.to__form-field {
+.to-form-field {
   position: relative;
   margin-bottom: 40px;
 
@@ -259,7 +259,7 @@ input:valid {
   }
 }
 
-.to__form-input {
+.to-form-input {
   display: block;
   padding: 0;
   border: 0;
@@ -276,11 +276,11 @@ input:valid {
   }
 }
 
-.to__form-input::placeholder {
+.to-form-input::placeholder {
   color: $primaryТextСolor;
 }
 
-.to__form-input:focus {
+.to-form-input:focus {
   outline: inherit;
 }
 
@@ -388,7 +388,7 @@ input:valid {
   }
 }
 
-.to__form-textarea {
+.to-form-textarea {
   padding: 0;
   width: 100%;
   height: 95px;
@@ -408,7 +408,7 @@ input:valid {
   }
 }
 
-.to__form-btn-grp {
+.to-form-btn-grp {
   @media screen and (min-width: 1280px) {
     display: flex;
     margin-bottom: 120px;
@@ -417,7 +417,7 @@ input:valid {
   }
 }
 
-.to__form-btn {
+.to-form-btn {
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -438,7 +438,7 @@ input:valid {
   }
 }
 
-.to__form-btn-buy {
+.to-form-btn-buy {
   margin-bottom: 16px;
   color: #01383a;
   background: $accentTextColor;
@@ -455,13 +455,13 @@ input:valid {
   }
 }
 
-.to__form-btn-buy:hover,
-.to__form-btn-buy:focus {
+.to-form-btn-buy:hover,
+.to-form-btn-buy:focus {
   box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
     0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-.to__form-btn-add {
+.to-form-btn-add {
   margin-bottom: 48px;
   background-color: transparent;
   color: $accentTextColor;
@@ -478,10 +478,7 @@ input:valid {
   }
 }
 
-.to__form-btn-add:hover,
-.to__form-btn-add:focus {
-  color: #01383a;
-  background: $accentTextColor;
-  box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
-    0px 4px 10px rgba(255, 255, 255, 0.1);
+.to-form-btn-add:hover,
+.to-form-btn-add:focus {
+filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1)) drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
 }
