@@ -8,9 +8,9 @@
     </symbol>
 
     <!-- Menu -->
-    <symbol id="icon-icon-menu-close-cross" viewBox="0 0 32 32">
-      <path fill="currentColor" stroke-linecap="round" stroke-width="3.5556"
-        d="M29.63 30.222 2.371 1.778m27.259 0L2.371 30.222" />
+    <symbol id="icon-icon-menu-close-cross" viewBox="0 0 36 36">
+      <path
+        d="M33.3333 34L2.66663 2M33.3333 2L2.66663 34" stroke="#86E543" stroke-width="4" stroke-linecap="round"/>
     </symbol>
     <symbol id="icon-menu-open-burger" viewBox="0 0 48 32">
       <path
