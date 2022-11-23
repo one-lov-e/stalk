@@ -58,7 +58,6 @@ body {
   }
 }
 
-
 @media screen and (min-width: 1280px) {
   .to-product-info {
     position: relative;
@@ -276,12 +275,31 @@ input:valid {
   }
 }
 
+.to-form-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  
+  @include font(400, 16px, 1.25);
+  color: $primaryТextСolor;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.1;
+}
+}
+
 .to-form-input::placeholder {
   color: $primaryТextСolor;
 }
 
 .to-form-input:focus {
   outline: inherit;
+}
+
+.to-form-input:focus + .to-form-label {
+transform: translateY(-30px);
 }
 
 // Новый селектор для выбора
@@ -321,8 +339,8 @@ input:valid {
 }
 
 .selected::after {
-  content: '';
-  background: url('/src/images/take-order/polygon.svg');
+  content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='14' height='10' fill='none'><path fill='%23fff' d='M7.781 9.023a1 1 0 0 1-1.562 0L.504 1.874A1 1 0 0 1 1.285.25h11.43a1 1 0 0 1 .78 1.624L7.782 9.023Z'/></svg>");
+  // background: url('/src/images/take-order/polygon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -345,8 +363,9 @@ input:valid {
 }
 
 .select-box .options-container.active + .selected::after {
-  // transform-origin: bottom center;
+  transform-origin: center center;
   transform: rotateX(180deg);
+  // transform: translateY(-30px);
 }
 
 .select-box .options-container::-webkit-scrollbar {
@@ -480,5 +499,6 @@ input:valid {
 
 .to-form-btn-add:hover,
 .to-form-btn-add:focus {
-filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1)) drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
+  filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1))
+    drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
 }
