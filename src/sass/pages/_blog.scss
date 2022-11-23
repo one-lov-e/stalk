@@ -154,19 +154,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
   gap: 16px;
-  height: 100px;
   margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .loading span {
   width: 20px;
   height: 16px;
   border-radius: 30px;
-  //  animation: scale 0.9s ease-out infinite;
- animation: scale 1.5s linear infinite;
-  // animation: scale 0.9s alternate infinite ease;
+  animation: scale 1.5s linear infinite;
   background-color:$primaryTextColor;
 }
 
