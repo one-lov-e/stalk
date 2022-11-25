@@ -50,7 +50,8 @@ body {
   overflow: hidden;
 }
 
-.container {
+// ! Подивитися, бо маємо загальні точки перелому у 480px для мобільного
+.container-take-order {
   width: 100%;
   padding: 0 16px;
   margin: 0 auto;
