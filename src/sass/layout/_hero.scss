@@ -14,7 +14,7 @@
     background-image: url('../images/hero/hero@2x.webp');
   }
 
-  // * if no webp support in browser, load jpg. Check by checkWebpSupport.js
+  // * if no webp support in browser, load jpg. Check by` checkWebpSupport.js
   body.no-webp & {
     background-image: url('../images/hero/hero.jpg');
 
