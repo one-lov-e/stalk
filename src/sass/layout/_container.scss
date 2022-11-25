@@ -9,6 +9,7 @@
 
   @include media-tablet() {
     width: $tabletBreakpoint;
+    padding-inline: $containerPaddingDefault;
   }
 
   @include media-desktop() {

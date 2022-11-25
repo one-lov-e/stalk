@@ -1,9 +1,12 @@
 body {
   font-family: 'Roboto', sans-serif;
+
+  background-color: $backgroundColor;
 }
 
 img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 12px;
 }
