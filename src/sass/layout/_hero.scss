@@ -3,16 +3,7 @@
 }
 
 .section-hero {
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  height: 600px;
-  padding-top: 284px;
-
-  // background-image: url('../images/hero/test-hero.jpg');
+  // background-image: url('../images/hero/hero.webp');
   // background-repeat: no-repeat;
   // background-position: center;
   // background-size: cover;
@@ -20,19 +11,27 @@
   // @media (min-device-pixel-ratio: 2),
   //   (min-resolution: 192dpi),
   //   (min-resolution: 2dppx) {
-  //   // background-image: url('../images/hero/hero@2x.webp');
+  //   background-image: url('../images/hero/hero@2x.webp');
   // }
 
   // // * if no webp support in browser, load jpg. Check by checkWebpSupport.js
   // body.no-webp & {
-  //   // background-image: url('../images/hero/hero.jpg');
+  //   background-image: url('../images/hero/hero.jpg');
 
   //   @media (min-device-pixel-ratio: 2),
   //     (min-resolution: 192dpi),
   //     (min-resolution: 2dppx) {
-  //     // background-image: url('../images/hero/hero@2x.jpg');
+  //     background-image: url('../images/hero/hero@2x.jpg');
   //   }
   // }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 600px;
+  padding-top: 278px;
 
   @media screen and (max-width: 767px) {
     align-items: center;
@@ -59,6 +58,13 @@
 
   @include font(500, 32px, 1.18);
   color: #ffffff;
+
+  @media screen and (max-width: 479px) {
+    max-width: 75vw;
+    padding-inline: calc(5vmin);
+
+    font-size: calc(1.25vmin * 5);
+  }
 
   @media screen and (max-width: 767px) {
     text-align: center;
