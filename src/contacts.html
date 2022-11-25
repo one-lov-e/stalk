@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/index.scss" />
+
+    <title>Contacts page</title>
+</head>
+
+<body>
+    <!-------------------------------------->
+    <!-------  тут має бути header------------>
+    <!------------------------------------ -->
+    <main>
+        <section class="contacts">
+            <div class="container">
+                <h2 class="page-name">Contacts</h2>
+
+                <!-- <include src="./partials/lines.html"></include> -->
+
+                <div class="contacts-picture">
+                    <picture>
+                        <source srcset="./images/contacts_desk_1x.jpg 1x,
+                                       ./images/contacts_desk_2x.jpg 2x" media="(min-width: 1280px)" />
+                        <source srcset="./images/contacts_tablet_1x.jpg 1x,
+                                        ./images/contacts_tablet_2x.jpg 2x" media="(min-width: 768px)" />
+                        <source srcset="./images/contacts_mobile_1x.jpg 1x,
+                                        ./images/contacts_mobile_2x.jpg 2x" media="(max-width: 767px)" />
+                        <img src="./images/contacts_desk_1x.jpg" alt="blog">
+                    </picture>
+                </div>
+                <div class="contacts-container-form">
+                    <div class="contacts-container-desktop">
+                        <div class="contacts-content">
+                            <span>In case of queries about order handling and/
+                                or delay, drop us an email at<br />
+                                <br />
+                                info@shopforgamers.com </span>
+                        </div>
+                        <div class="contacts-container-tablet">
+                            <!------------ мило  ------------>
+                            <div class="contacts-email">
+                                <p class="contacts-link-text">Email</p>
+                                <a class="contacts-link" href="mailto:sfg.info@gmail.com">Sfg.info@gmail.com</a>
+                            </div>
+
+                            <!----------------телефони --------------->
+                            <div class="contacts-tel">
+                                <ul class="contacts-list">
+                                    <p class="contacts-link-text">Phone number</p>
+                                    <li class="contacts-item">
+                                        <a class="contacts-link" href="tel:+380936432288">+38 (093) 643 22 88</a>
+                                    </li>
+                                    <li class="contacts-item">
+                                        <a class="contacts-link" href="tel:+380503454423">+38 (050) 345 44 23</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------------->
+                    <div class="form-contacts">
+                        <!-- дадати форму CONTACT US -->
+                    </div>
+
+                    <!-- дадати кнопку SEND -->
+                    <!------------------------------------->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-------  тут має бути Footer-->
+
+</body>
+
+</html>
