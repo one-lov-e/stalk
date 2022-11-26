@@ -32,7 +32,7 @@
 .mobile-menu-header {
    position: relative;
    display: flex;
-   align-items: center;
+   align-items: flex-end;
    justify-content: space-between;
 
    padding: 24px 16px;
@@ -61,9 +61,11 @@
    color: $primaryТextСolor;
 }
 .mobile-menu-close {
-   position: absolute;
-   top: 50%;
-   left: 50%;
+   @media screen and (min-width: $tabletBreakpoint) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+   }
 
    transform: translate(-50%, -25%);
    fill: $accentTextColor;
