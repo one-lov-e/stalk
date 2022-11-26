@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./sass/index.scss" />
 
     <title> Blog Page</title>
-
+<include src="./partials/head-favicon.html"></include>
 </head>
 
 <body>
@@ -20,13 +20,7 @@
             <div class="container">
                 <!-- заголовок секції однаковий- такий же як Take order  и  Contacts -->
                 <!-- тому клас треба додати йому такий же як у iнших  -->
-
                 <h2 class="page-name">Blog</h2>
-
-                <!-- додати подвійну линию ЧЕРЕЗ SVG
-                <svg class="" with="" height="">
-                <use href="./images/symbol-defs.svg#icon-ПОДВІЙНА ЛИНИЯ "></use>
-                </svg>-->
 
                 <ul class="blog-list">
                     <li class="blog-item">
@@ -157,8 +151,20 @@
                 </ul>
             </div>
 
-            <!--  тут Маркерам знизу слід додати анімації
+
+
+            <!--  Додала анімацію
             для імітації процесу підвантаження інформації на сторінці. -->
+
+            <!--------------------------------------------------------->
+            <div class="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--------------------------------------------------------->
+
+
         </section>
 
         <!--   тут має бути footer  -->
