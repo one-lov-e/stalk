@@ -10,13 +10,12 @@
   //   z-index: 25;
 }
 
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px;
-  @include media-desktop {
+  @include media-tablet {
     padding: 40px;
   }
 }
@@ -51,6 +50,18 @@
   }
 }
 
+.btn-menu-open {
+  background-color: #01383a;
+  border: none;
+  margin-left: auto;
+  @include media-tablet {
+    margin-left: 0;
+  }
+  @include media-desktop {
+    display: none;
+  }
+}
+
 .header-menu-link {
   display: block;
   font-weight: 400;
@@ -66,15 +77,13 @@
 }
 
 // мобильное меню
-.btn-menu-icon{
-    fill:#a71b1b;
-}
-.btn-menu-open {
-  margin-left: auto;
+.btn-menu-icon {
+  fill: #86e543;
 }
 
-.mob-container{
-      width: 100%;
+.mob-container {
+  position: relative;
+  width: 100%;
   margin-inline: auto;
   padding-inline: $containerPaddingSmall;
 
@@ -90,13 +99,19 @@
 
 .header-mob-menu {
   position: fixed;
-  top: 105px;
-  background-color: #000000;
+  top: 104px;
+  background-image: url(/src/images/header/bg-menu-mob.jpg);
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  padding-top: 48px;
-  border-bottom: 48px;
+  padding-top: 64px;
+  box-shadow: insert 0px 4px 10px rgba(97, 162, 58, 0.2),
+    0px 4px 50px rgba(94, 236, 54, 1), 0px 4px 4px rgba(17, 168, 26, 0.2);
+  @include media-tablet() {
+    top: 136px;
+    padding-top: 120px;
+    background-image: url(/src/images/header/bg-menu-tab.jpg);
+  }
 }
 
 .header-mob-menu.is-hidden {
@@ -111,107 +126,37 @@
 
 .btn-menu-close {
   display: block;
-  margin-left: auto;
-  background-color: transparent;
+  // margin-left: auto;
+  position: absolute;
+  top: -136px;
+  left: 403px;
+  // right:auto;
+  background-color: #01383a;
   border: none;
-  fill:#000000;
+  z-index: 999;
+  @include media-tablet {
+    top: -210px;
+    left: 360px;
+  }
 }
+
+.mobil-menu-item {
+  text-align: center;
+}
+
 .mobil-menu-item:not(:last-child) {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
-.mobil-menu-link {    
+
+.mobil-menu-link {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: right;
   text-transform: uppercase;
-  color: #000000;
+
+  color: #ffffff;
 }
-
-.link {
-}
-
-//jjjjjjjjjjjjjjjjjjjjjjjjj
-
-// .menu-toggle {
-//   min-height: 54px;
-//   min-width: 40px;
-//   margin: 0;
-//   padding: 0;
-//   background-color: transparent;
-//   cursor: pointer;
-//   border: none;
-//   outline: none;
-//   fill: #86e543;
-//   @include media-desktop {
-//     display: none;
-//   }
-// }
-
-// .menu-container {
-//   position: fixed;
-//   top: 104px;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   //   padding: 40px;
-//   background-image: url(/src/images/header/bg-menu-mob.jpg);
-//   box-shadow: insert 0px 4px 10px rgba(97, 162, 58, 0.7),
-//     0px 4px 50px rgba(94, 236, 54, 1), 0px 4px 4px rgba(17, 168, 26, 0.7);
-//   z-index: 99;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   overflow: auto;
-//   transform: translateX(100%);
-//   // transition: transform 50ms ease-in-out;
-
-//   @include media-tablet {
-//     background-image: url(/src/images/header/bg-menu-tab.jpg);
-//   }
-// }
-
-// .menu-container-shadow {
-//   height: 1px;
-//   box-shadow: insert 0px 4px 10px rgba(97, 162, 58, 0.7),
-//     0px 4px 50px rgba(94, 236, 54, 1), 0px 4px 4px rgba(17, 168, 26, 0.7);
-// }
-
-// .menu-container.is-open {
-//   transform: translateX(0);
-// }
-
-// .menu-container .menu-toggle {
-//   position: absolute;
-//   display: block;
-//   top: -79px;
-//   right: 108px;
-//   fill: #86e543;
-//   background-color: #fff;
-//   color: #fff;
-//   z-index: 999;
-// }
-
-// .mobile-menu {
-//   padding: 0;
-//   margin: 0;
-//   list-style: none;
-// }
-
-// .mobil-menu__link {
-//   display: block;
-//   padding-bottom: 32px;
-//   font-weight: 500;
-//   font-size: 40px;
-//   line-height: 1.18;
-//   letter-spacing: 0.02em;
-//   // color:  var(--main-color);
-//   &:hover,
-//   &:focus {
-//     color: var(--main-focus);
-//   }
-// }
 
 .header-btn {
   display: none;

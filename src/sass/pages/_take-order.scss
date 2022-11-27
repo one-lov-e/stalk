@@ -34,13 +34,11 @@ body {
     width: 480px;
   }
   @include media-tablet {
-    padding-top: 120px;
     width: 768px;
     padding: 0 40px;
-  }
-
-  @include media-desktop {
     padding-top: 120px;
+  }
+  @include media-desktop {
     width: 1280px;
   }
 }
