@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   margin-bottom: 40px;
 
   background: #01383a;
@@ -14,6 +15,7 @@
   @include media-tablet() {
     margin-bottom: 120px;
   }
+  z-index: 2;
 }
 
 .header-container {
