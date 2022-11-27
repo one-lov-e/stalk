@@ -1,0 +1,21 @@
+.glide__bullets {
+  display: flex;
+  gap: 16px;
+}
+
+.glide__bullet {
+  width: 16px;
+  height: 16px;
+
+  background-color: #ffffff;
+  border: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.glide__bullet--active {
+  width: 40px;
+
+  border-radius: 15px;
+}
