@@ -3,8 +3,15 @@
   margin-inline: auto;
 }
 
-// .index-slider-content {
-// }
+.index-slider-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media-tablet() {
+    gap: 32px;
+  }
+}
 
 // .index-slider-list {
 // }

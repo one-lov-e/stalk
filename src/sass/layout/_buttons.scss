@@ -84,6 +84,7 @@
 .glide__bullets {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .glide__bullet {
@@ -100,5 +101,5 @@
 .glide__bullet--active {
   width: 40px;
 
-  border-radius: 15px;
+  border-radius: 50px;
 }
