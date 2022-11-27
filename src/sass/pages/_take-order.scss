@@ -1,185 +1,63 @@
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p {
-//     margin: 0;
-// }
-
-// ul,
-// ol {
-//     margin: 0;
-//     padding-left: 0;
-// }
-
-// img {
-//   display: block;
-//   min-width: 100%;
-//   height: auto;
-// }
-
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url(../images/take-order/bg_mob.jpg);
   border: 0;
   margin: 0;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     background-image: url(../images/take-order/bg_tab.jpg);
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     background-image: url(../images/take-order/bg_desktop.jpg);
   }
 }
 
-// .list {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
-
-// .link {
-//     text-decoration: none;
-//     color: var(--main-color);
-// }
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
 .no-scroll {
   overflow: hidden;
 }
 
+.to-main {
+  padding-top: 40px;
+}
 // ! Подивитися, бо маємо загальні точки перелому у 480px для мобільного
 .container-take-order {
   width: 100%;
   padding: 0 16px;
+  padding-top: 40px;
   margin: 0 auto;
 
-  @media screen and (min-width: 320px) {
-    width: 320px;
+  @include media-mobile {
+    width: 480px;
   }
-
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     width: 768px;
     padding: 0 40px;
+    padding-top: 120px;
   }
-
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     width: 1280px;
   }
 }
 
-.to__main {
-  padding-top: 40px;
+.to-title {
+  @include font(600, 24px, 1.16);
+  color: $primaryTextColor;
 
-  @media screen and (min-width: 768px) {
-    padding-top: 120px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-top: 120px;
-  }
-}
-
-.to__title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.16;
-  color: #ffffff;
-
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     margin-left: 83px;
-    font-size: 56px;
-    line-height: 1.18;
+    @include font(500, 56px, 1.16);
   }
 }
 
-/* Линии на бордере */
-
-.to__line {
-  margin-bottom: 24px;
-
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 56px;
-  }
-}
-
-.to__line_first {
-  margin-bottom: -5px;
-}
-
-.to__line_first,
-.to__line_second {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.to__line-one {
-  width: 40%;
-  height: 8px;
-  border-bottom: 1px solid #7be34a;
-  border-right: 1px solid #7be34a;
-  box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
-
-  @media screen and (min-width: 768px) {
-    width: 53%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 30%;
-  }
-}
-
-.to__line-two {
-  width: 60%;
-  height: 8px;
-  border-top: 1px solid #7be34a;
-  box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
-
-  @media screen and (min-width: 768px) {
-    width: 47%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 70%;
-  }
-}
-
-.to__line-three {
-  width: 41%;
-  height: 7px;
-  border-bottom: 1px solid #28780d;
-  border-right: 1px solid #28780d;
-  box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
-
-  @media screen and (min-width: 768px) {
-    width: calc(53% + 3px);
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: calc(30% + 3px);
-  }
-}
-
-.to__line-four {
-  width: 59%;
-  height: 7px;
-  border-top: 1px solid #28780d;
-  box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
-
-  @media screen and (min-width: 768px) {
-    width: calc(47% - 3px);
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: calc(70% - 3px);
-  }
-}
-/* Конец линиям */
-
-@media screen and (min-width: 1280px) {
-  .to__product_info {
+@include media-desktop {
+  .to-product-info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -187,78 +65,75 @@ body {
   }
 }
 
-.to__name {
+.to-name {
   display: block;
   margin-bottom: 16px;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.19;
-  color: #ffffff;
+  @include font(600, 32px, 1.19);
+  color: $primaryTextColor;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     margin-bottom: 24px;
-    font-size: 56px;
-    line-height: 1.18;
+    @include font(600, 56px, 1.18);
   }
 
-  @media screen and (min-width: 768px) {
+  @include media-desktop {
     margin-bottom: 32px;
   }
 }
 
 .product {
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin-bottom: 0;
   }
 }
 
-.to__image_main {
+.to-image-main {
   margin-bottom: 16px;
+  width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     margin-bottom: 0;
     width: 387px;
     height: 346px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     position: absolute;
     top: 0;
     left: 0;
   }
 }
 
-.to__img-main {
-  width: 288px;
-  height: 254px;
+.to-img-main {
+  // width: 100%;
+  // height: 354px;
   border-radius: 12px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     min-width: 387px;
     min-height: 346px;
   }
 }
 
-.to__price {
+.to-price {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     display: block;
     padding-left: 40px;
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     display: flex;
     justify-content: space-between;
     padding-left: 0;
@@ -267,100 +142,96 @@ body {
   }
 }
 
-.to__sale-price {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1;
+.to-sale-price {
+  @include font(600, 16px, 1);
   text-decoration-line: line-through;
   color: #8d9289;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     margin-bottom: 46px;
     font-size: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin-bottom: 0;
-    font-size: 24px;
     margin-right: 40px;
   }
 }
 
-.to__discount-price {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1;
-  color: #86e543;
+.to-discount-price {
+  @include font(600, 32px, 1);
+  color: $accentTextColor;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     font-size: 48px;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 48px;
+  @include media-desktop {
     margin-right: 320px;
   }
 }
 
-.to__images-list {
+.to-images {
+  width: 100%;
+}
+
+.to-images-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  width: 100%;
-  height: 62px;
+  gap: 16px;
+  width: auto;
   margin-bottom: 32px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     height: 160px;
     margin-bottom: 48px;
     gap: 24px;
   }
+  @include media-desktop {
+    margin-left: 500px;
+  }
 }
 
-.to__image-img {
-  height: 62px;
-  width: 60px;
+.to-image-img {
   border-radius: 6px;
-
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     height: 160px;
     width: 154px;
   }
 }
 
-.to__contact {
+.to-contact {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     display: block;
   }
 }
 
-.to__contact-title {
+.to-contact-title {
   width: 100%;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.17;
-  color: #86e543;
+  @include font(600, 24px, 1.17);
+  color: $accentTextColor;
   margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     font-size: 36px;
     padding-left: 49px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     padding-left: 0;
   }
 }
 
-.to__form {
+.to-form {
   display: block;
   width: 100%;
 }
@@ -371,50 +242,72 @@ input:invalid {
 
 input,
 input:valid {
-  border-color: #86e543;
+  border-color: $accentTextColor;
 }
 
-.to__form-full {
-  @media screen and (min-width: 1280px) {
+.to-form-full {
+  @include media-desktop {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.to__form-field {
+.to-form-field {
   position: relative;
   margin-bottom: 40px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-desktop {
     width: 590px;
   }
 }
 
-.to__form-input {
+.to-form-input {
   display: block;
   padding: 0;
   border: 0;
-  border-bottom: 1px solid #86e543;
+  border-bottom: 1px solid $accentTextColor;
   background-color: transparent;
   width: 100%;
   height: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #ffffff;
+  @include font(400, 16px, 1.25);
+  color: $primaryTextColor;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     font-size: 18px;
     line-height: 1.1;
   }
 }
 
-.to__form-input::placeholder {
-  color: #ffffff;
+.to-form-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @include font(400, 16px, 1.25);
+  color: $primaryTextColor;
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 1.1;
+  }
 }
 
-.to__form-input:focus {
+// .to-form-input::placeholder {
+//   color: $primaryТextСolor;
+// }
+
+.to-form-input:focus {
   outline: inherit;
+}
+
+.to-form-input:focus + .to-form-label,
+.to-form-input:not(:placeholder-shown) + .to-form-label {
+  transform: translateY(-30px);
+  font-size: 12px;
 }
 
 // Новый селектор для выбора
@@ -440,24 +333,22 @@ input:valid {
   width: 100%;
   height: 24px;
   margin-bottom: 40px;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  color: $primaryTextColor;
+  @include font(400, 16px, 1.25);
   position: relative;
   order: 0;
-  border-bottom: 1px solid #86e543;
+  border-bottom: 1px solid $accentTextColor;
 
-  @media screen and (min-width: 768px) {
-    width: 590px;
+  @include media-tablet {
+    width: 100%;
     font-size: 18px;
     line-height: 1.1;
   }
 }
 
 .selected::after {
-  content: '';
-  background: url('/src/images/take-order/polygon.svg');
+  content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='14' height='10' fill='none'><path fill='%23fff' d='M7.781 9.023a1 1 0 0 1-1.562 0L.504 1.874A1 1 0 0 1 1.285.25h11.43a1 1 0 0 1 .78 1.624L7.782 9.023Z'/></svg>");
+  // background: url('/src/images/take-order/polygon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -476,12 +367,13 @@ input:valid {
   max-height: 240px;
   opacity: 1;
   overflow-y: scroll;
-  border-bottom: 1px solid #86e543;
+  border-bottom: 1px solid $accentTextColor;
 }
 
 .select-box .options-container.active + .selected::after {
-  // transform-origin: bottom center;
+  transform-origin: center center;
   transform: rotateX(180deg);
+  // transform: translateY(-30px);
 }
 
 .select-box .options-container::-webkit-scrollbar {
@@ -513,40 +405,43 @@ input:valid {
 // Конец нового селектора
 
 .comment {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  @include font(400, 16px, 1.25);
   text-transform: capitalize;
   background-color: transparent;
-  color: #ffffff;
+  color: $primaryTextColor;
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin-left: 20px;
   }
 }
 
-.to__form-textarea {
+.to-form-textarea {
   padding: 0;
   width: 100%;
   height: 95px;
   margin-bottom: 24px;
-  border: 1px solid #86e543;
+  color: $primaryTextColor;
+  border: 1px solid $accentTextColor;
   background-color: transparent;
   border-radius: 0px;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     height: 256px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     width: 589px;
     margin-bottom: 48px;
     margin-left: 20px;
   }
 }
 
-.to__form-btn-grp {
-  @media screen and (min-width: 1280px) {
+.to-form-textarea:focus {
+  outline: inherit;
+}
+
+.to-form-btn-grp {
+  @include media-desktop {
     display: flex;
     margin-bottom: 120px;
     justify-content: center;
@@ -554,73 +449,69 @@ input:valid {
   }
 }
 
-.to__form-btn {
+.to-form-btn {
   display: block;
   text-align: center;
   margin: 0 auto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(700, 16px, 1.19);
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #86e543;
+  border: 1px solid $accentTextColor;
   border-radius: 16px;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     font-size: 32px;
     margin-bottom: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin: 0;
   }
 }
 
-.to__form-btn-buy {
+.to-form-btn-buy {
   margin-bottom: 16px;
   color: #01383a;
-  background: #86e543;
+  background: $accentTextColor;
   padding: 16px 42px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     padding: 16px 64px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin-bottom: 0;
     padding: 16px 64px;
   }
 }
 
-.to__form-btn-buy:hover,
-.to__form-btn-buy:focus {
+.to-form-btn-buy:hover,
+.to-form-btn-buy:focus {
   box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
     0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-.to__form-btn-add {
+.to-form-btn-add {
   margin-bottom: 48px;
   background-color: transparent;
-  color: #86e543;
+  color: $accentTextColor;
   padding: 16px 36px;
   transition: box-shadow 100ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width: 768px) {
+  @include media-tablet {
     padding: 16px 52px;
     margin-bottom: 120px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media-desktop {
     margin-bottom: 0;
   }
 }
 
-.to__form-btn-add:hover,
-.to__form-btn-add:focus {
-  color: #01383a;
-  background: #86e543;
-  box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
-    0px 4px 10px rgba(255, 255, 255, 0.1);
+.to-form-btn-add:hover,
+.to-form-btn-add:focus {
+  filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1))
+    drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
 }
