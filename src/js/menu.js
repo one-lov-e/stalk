@@ -9,6 +9,8 @@
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
+    refs.openMenuBtn.classList.toggle('is-hidden');
+    refs.closeMenuBtn.classList.toggle('is-hidden');
     refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
