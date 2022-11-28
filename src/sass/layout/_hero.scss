@@ -1,6 +1,6 @@
 .section-hero {
   max-width: 1400px;
-  margin-top: -144px;
+  margin-top: -104px;
   margin-inline: auto;
 
   background-image: url('../images/hero/hero.webp');
@@ -29,14 +29,17 @@
 
   overflow: hidden;
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 0;
-  }
-
   @include media-tablet() {
     margin-top: -256px;
 
+    background-position: center;
     background-size: contain;
+  }
+}
+
+.section.section-hero {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0px;
   }
 }
 
