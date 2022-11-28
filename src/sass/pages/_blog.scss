@@ -1,6 +1,15 @@
 .blog {
   color: $primaryTextColor;
 }
+.blog img {
+  width: 100%;
+  @include media-tablet {
+    border-radius: 12px;
+  }
+  @include media-desktop {
+    border-radius: 12px;
+  }
+}
 
 .page-name {
   @include font(500, 24px, 1.16);
@@ -14,7 +23,7 @@
   @include media-desktop {
     @include font(500, 56px, 1.2);
     margin-left: 100px;
-    margin-bottom: 75px;
+    margin-bottom: 8px;
   }
 }
 
@@ -156,8 +165,16 @@
   align-items: center;
   gap: 16px;
   margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 54px;
+  margin-bottom: 42px;
+  @include media-tablet {
+    margin-top: 35px;
+    margin-bottom: 120px;
+  }
+  @include media-desktop {
+    margin-top: 48px;
+    margin-bottom: 120px;
+  }
 }
 
 .loading span {
@@ -165,27 +182,25 @@
   height: 16px;
   border-radius: 30px;
   animation: scale 1.5s linear infinite;
-  background-color:$primaryTextColor;
+  background-color: $primaryTextColor;
 }
 
 .loading span:nth-child(1) {
-   animation-delay: 0.3s;
-  background-color:$primaryTextColor;
+  animation-delay: 0.3s;
+  background-color: $primaryTextColor;
 }
 
 .loading span:nth-child(2) {
   animation-delay: 0.6s;
-  background-color:$primaryTextColor;
+  background-color: $primaryTextColor;
 }
 
 .loading span:nth-child(3) {
   animation-delay: 0.9s;
-  background-color:$primaryTextColor;
+  background-color: $primaryTextColor;
 }
 
-
 @keyframes scale {
-  
   0% {
     transform: scaleX(0.5);
   }
