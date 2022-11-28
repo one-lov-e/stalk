@@ -10,13 +10,22 @@
   </head>
 
   <body>
-    <!-- @AKSEIEV -->
     <include src="./partials/header.html"></include>
 
     <main>
+      <!-- @biggujo - Dmytro Ivashchenko -->
       <include src="./partials/hero.html"></include>
+
+      <!-- @biggujo - Dmytro Ivashchenko -->
+      <include src="./partials/index-slider.html"></include>
     </main>
 
     <include src="./partials/footer.html"></include>
+
+    <!-- ! Glider.js -->
+    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+      new Glide('.glide', { type: 'carousel', autoplay: 4500 }).mount();
+    </script>
   </body>
 </html>

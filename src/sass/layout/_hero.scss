@@ -1,7 +1,3 @@
-* {
-  outline: 1px solid tomato;
-}
-
 .section-hero {
   max-width: 1400px;
   margin-top: -144px;
@@ -33,8 +29,14 @@
 
   overflow: hidden;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
   @include media-tablet() {
     margin-top: -256px;
+
+    background-size: contain;
   }
 }
 
